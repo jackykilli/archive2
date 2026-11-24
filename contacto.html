@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto - Archive Tung</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="contacto">
+
+<div id="app-header"></div>
+
+<main>
+  <section class="page-title">
+    <div class="section-head">
+      <h2>Contacto</h2>                                           <!-- ✏️ EDITAR título -->
+      <p>¿Dudas con un talle o un pedido? Escribinos.</p>         <!-- ✏️ EDITAR subtítulo -->
+    </div>
+  </section>
+
+  <section style="padding-top:10px">
+    <div class="two-col">
+      <!-- Este formulario abre tu correo con el mensaje armado (el mail se define en config.js → email). No guarda datos en ningún servidor. -->
+      <form class="card" id="contactForm">
+        <h3>Envianos un mensaje</h3>
+        <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" required></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+        <div class="field"><label for="asunto">Asunto</label><input id="asunto" name="asunto"></div>
+        <div class="field"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="5" required></textarea></div>
+        <button class="btn btn-primary" type="submit" style="width:100%;border:none">Enviar</button>
+      </form>
+
+      <div class="card">
+        <h3>Información</h3>                                                   <!-- ✏️ EDITAR bloque de info -->
+        <p style="margin-bottom:12px">Respondemos de lunes a sábado, de 10 a 20 hs.</p>
+        <p style="margin-bottom:12px"><strong>Envíos:</strong> a todo el país.</p>
+        <p style="margin-bottom:12px"><strong>Cambios:</strong> hasta 30 días después de recibir tu compra.</p>
+        <p style="margin-bottom:20px"><strong>Pagos:</strong> transferencia, Mercado Pago, tarjeta o efectivo.</p>
+        <a id="waBtn" class="btn btn-primary" href="#" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✏️ Datos de Instagram: config.js → instagram -->
+  <section id="instagram"></section>
+</main>
+
+<div id="app-footer"></div>
+<script src="config.js"></script>
+<script src="productos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

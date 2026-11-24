@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archive Tung - Moda de archivo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="inicio">
+
+<div id="app-header"></div>
+
+<main>
+ 
+  <div class="hero" id="hero">
+    <div class="slide strong" style="background-image:url('img/fondoin.jpg'),linear-gradient(135deg,#111,#555)">
+      <small>Colección de archivo</small>                                         
+      <h1>Piezas de archivo<br>para un pequeño under</h1>                       
+      <p>Ropa y accesorios de culto seleccionados uno por uno.</p>              
+      <a href="productos.html" class="btn btn-light">Comprar ahora</a>           
+    </div>
+    <div class="slide" style="background-image:url('img/modelom.jpg'),linear-gradient(135deg,#1a1a1a,#666);background-position:center 22%">
+      <small>Hombre</small>
+      <h1>Denim y gráficas</h1>
+      <a href="hombre.html" class="btn btn-light">Ver hombre</a>
+    </div>
+    <div class="slide" style="background-image:url('img/modelod.jpg'),linear-gradient(135deg,#222,#777);background-position:center 15%">
+      <small>Mujer</small>
+      <h1>Siluetas de archivo</h1>
+      <a href="mujer.html" class="btn btn-light">Ver mujer</a>
+    </div>
+    <button type="button" class="hero-arrow hero-prev" aria-label="Anterior">&larr;</button>
+    <button type="button" class="hero-arrow hero-next" aria-label="Siguiente">&rarr;</button>
+    <div class="hero-dots" id="heroDots"></div>
+  </div>
+
+  
+
+  
+  <section style="padding-top:10px">
+    <div class="container">
+      <div class="section-head">
+                               
+        <h2>Elegí tu pieza</h2>                                         
+      </div>
+      <div class="products" id="productGrid" data-categoria="all" data-limite="4"></div>
+      <p style="text-align:center;margin-top:36px"><a href="productos.html" class="btn btn-primary">Ver todo el archivo</a></p>
+    </div>
+  </section>
+
+ 
+  <section style="padding-top:10px">
+    <div class="container">
+      <div class="section-head">
+        <small>Archivo</small>
+        <h2>Comprá por marca</h2>
+      </div>
+      <div class="brands">
+        <a class="brand-tile big" href="productos.html"><div class="shape" style="background-image:url('img/todaslasmarcas.jpg')"></div><span>Todas las marcas</span></a>
+        <a class="brand-tile" href="productos.html?marca=Rick%20Owens"><div class="shape" style="background-image:url('img/rowns.jpg')"></div><span>Rick Owens</span></a>
+        <a class="brand-tile" href="productos.html?marca=Margiela"><div class="shape" style="background-image:url('img/mmargielashoe.jpg')"></div><span>Margiela</span></a>
+        <a class="brand-tile" href="productos.html?marca=Jnco"><div class="shape" style="background-image:url('img/jnco.jpg')"></div><span>Jnco</span></a>
+        <a class="brand-tile" href="productos.html?marca=Southpole"><div class="shape" style="background-image:url('img/sp.jpg')"></div><span>Southpole</span></a>
+        <a class="brand-tile" href="productos.html?marca=Affliction"><div class="shape" style="background-image:url('img/aff.jpg')"></div><span>Affliction</span></a>
+        <a class="brand-tile" href="productos.html?marca=Polo"><div class="shape" style="background-image:url('img/polor.jpg')"></div><span>Polo</span></a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- ================= PREGUNTAS FRECUENTES ================= -->
+  <section id="faq"></section>
+
+  <!-- ================= INSTAGRAM ================= -->
+  <section id="instagram"></section>
+
+  <!-- ================= NEWSLETTER =================  -->
+  <section class="newsletter">
+    <h2>Únete al archivo</h2>
+    <p>Recibe 10% de descuento en tu primera compra y los próximos lanzamientos.</p>
+    <form class="news-form" id="newsForm">
+      <input type="email" placeholder="Tu correo electrónico" required>
+      <button type="submit">Suscribirme</button>
+    </form>
+  </section>
+</main>
+
+<div id="app-footer"></div>
+
+<script src="config.js"></script>
+<script src="productos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

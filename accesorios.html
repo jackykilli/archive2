@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accesorios - Archive Tung</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="accesorios">
+
+<div id="app-header"></div>
+
+<main>
+  <section class="page-title">
+    <div class="section-head">
+      <h2>Accesorios</h2>                                         <!-- ✏️ EDITAR título -->
+      <p>Anillos y zapatillas para completar el look.</p>               <!-- ✏️ EDITAR subtítulo -->
+    </div>
+  </section>
+
+  <!-- Las prendas se cargan solas desde productos.js (categoria: "accesorios").
+       ✏️ Para cambiar fotos, nombres, descripciones y precios editá productos.js -->
+  <section style="padding-top:10px">
+    <div class="container">
+      <div class="products three" id="productGrid" data-categoria="accesorios"></div>
+    </div>
+  </section>
+</main>
+
+<div id="app-footer"></div>
+<script src="config.js"></script>
+<script src="productos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

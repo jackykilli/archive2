@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finalizar compra - Archive Tung</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="checkout">
+
+<div id="app-header"></div>
+
+<main>
+  <!-- ================= FORMULARIO DE COMPRA =================
+       Pide los datos del comprador. NO se guardan en ningún servidor:
+       al confirmar se arma el resumen del pedido y podés enviarlo por mail o WhatsApp (config.js). -->
+  <div id="checkoutWrap">
+    <section class="page-title"><div class="section-head"><h2>Finalizar compra</h2><p>Completá tus datos para confirmar el pedido</p></div></section>
+    <section style="padding-top:10px">
+      <div class="checkout-grid">
+        <form class="card" id="checkoutForm">
+          <h3>Datos personales</h3>
+          <div class="row2">
+            <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" required autocomplete="given-name"></div>
+            <div class="field"><label for="apellido">Apellido</label><input id="apellido" name="apellido" required autocomplete="family-name"></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="dni">DNI</label><input id="dni" name="dni" required inputmode="numeric" pattern="[0-9]{7,8}" maxlength="8" placeholder="Sin puntos" title="Ingresá 7 u 8 números, sin puntos"></div>
+            <div class="field"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" type="tel" required autocomplete="tel"></div>
+          </div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+
+          <h3 style="margin-top:22px">Dirección de envío</h3>
+          <div class="row2">
+            <div class="field"><label for="direccion">Calle y número</label><input id="direccion" name="direccion" required autocomplete="address-line1"></div>
+            <div class="field"><label for="piso">Piso / Depto (opcional)</label><input id="piso" name="piso"></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="ciudad">Ciudad / Localidad</label><input id="ciudad" name="ciudad" required></div>
+            <div class="field"><label for="provincia">Provincia</label><input id="provincia" name="provincia" required></div>
+          </div>
+          <div class="field"><label for="cp">Código postal</label><input id="cp" name="cp" required maxlength="8"></div>
+
+          <h3 style="margin-top:22px">Pago y notas</h3>
+          <div class="field"><label for="pago">Método de pago</label><select id="pago" name="pago" required style="width:100%"></select></div>
+          <div class="field"><label for="notas">Notas del pedido (opcional)</label><textarea id="notas" name="notas" rows="3"></textarea></div>
+
+          <button class="btn btn-primary" type="submit" style="width:100%;border:none">Confirmar pedido</button>
+          <p class="note">Tus datos no se guardan en ningún servidor: solo se usan para armar el resumen de tu pedido.</p>
+        </form>
+
+        <div class="card">
+          <h3>Resumen del pedido</h3>
+          <div id="orderSummary"></div>
+          <a href="productos.html" class="btn btn-dark" style="width:100%;margin-top:16px">Seguir comprando</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= CONFIRMACIÓN ================= ✏️ EDITAR textos -->
+  <section id="confirmacion" style="display:none">
+    <div class="ok-box">
+      <h2>¡Gracias por tu compra, <span id="okNombre"></span>!</h2>
+      <p>Tu pedido fue registrado. Enviá este resumen para coordinar el pago y el envío:</p>
+      <div class="card"><pre id="okResumen" style="white-space:pre-wrap;font:inherit;font-size:14px"></pre></div>
+      <a id="okMail" class="btn btn-primary" href="#">Enviar pedido por mail</a>
+      <a id="okWa" class="btn btn-dark" href="#" target="_blank" rel="noopener" style="margin-left:8px">Enviar por WhatsApp</a>
+      <p style="margin-top:22px"><a href="index.html" style="color:var(--accent)">Volver al inicio</a></p>
+    </div>
+  </section>
+</main>
+
+<div id="app-footer"></div>
+<script src="config.js"></script>
+<script src="productos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos - Archive Tung</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="productos">
+
+<div id="app-header"></div>
+
+<main>
+  <section class="page-title">
+    <div class="section-head">
+      <h2>Marcas de archivo</h2>                                              
+      <p>Rick Owens, Margiela, Jnco, Southpole, Affliction y Polo</p>          
+    </div>
+  </section>
+
+  <section style="padding-top:10px">
+    <div class="container">
+      <div class="toolbar">
+        <div class="filters" id="filters">
+          <button class="chip active" data-filter="all">Todos</button>
+          <button class="chip" data-filter="mujer">Mujer</button>
+          <button class="chip" data-filter="hombre">Hombre</button>
+          <button class="chip" data-filter="accesorios">Accesorios</button>
+          <select id="brandSelect" aria-label="Filtrar por marca"><option value="all">Marca: todas</option></select>
+        </div>
+        <select id="sortSelect" aria-label="Ordenar">
+          <option value="default">Ordenar por: Destacados</option>
+          <option value="asc">Precio: menor a mayor</option>
+          <option value="desc">Precio: mayor a menor</option>
+        </select>
+      </div>
+      <!-- Se llena solo desde productos.js -->
+      <div class="products" id="productGrid" data-categoria="all"></div>
+    </div>
+  </section>
+</main>
+
+<div id="app-footer"></div>
+<script src="config.js"></script>
+<script src="productos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

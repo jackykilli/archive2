@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ofertas - Archive Tung</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="ofertas">
+
+<div id="app-header"></div>
+
+<main>
+  <!-- ✏️ EDITAR la IMAGEN: cambiá 'img/oferta.jpg'. Textos: <small>, <h2> y <p>.
+       La fecha de fin de la cuenta regresiva se cambia en config.js (ofertaHasta) -->
+  <section class="promo">
+    <div class="promo-inner">
+      <div class="promo-visual" style="background-image:url('img/oferta.jpg'),linear-gradient(135deg,#82b4ff,#1c3a7a)"></div>
+      <div>
+        <small>Oferta limitada</small>
+        <h2>Hasta 40% de descuento</h2>
+        <p>En piezas de archivo seleccionadas de Margiela, Southpole y Jnco. Solo por tiempo limitado, mientras duren las existencias.</p>
+        <div class="countdown" id="countdown">
+          <div><strong data-u="d">00</strong><small>Días</small></div>
+          <div><strong data-u="h">00</strong><small>Horas</small></div>
+          <div><strong data-u="m">00</strong><small>Min</small></div>
+          <div><strong data-u="s">00</strong><small>Seg</small></div>
+        </div>
+        <a href="#lista" class="btn btn-primary">Ver prendas en oferta</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="lista">
+    <div class="container">
+      <div class="section-head"><h2>Prendas en oferta</h2><p>Todas las prendas con precio anterior tachado en productos.js</p></div> <!-- ✏️ -->
+      <!-- Muestra solo las prendas con precioAnterior (se define en productos.js) -->
+      <div class="products" id="productGrid" data-categoria="all" data-ofertas="true"></div>
+    </div>
+  </section>
+</main>
+
+<div id="app-footer"></div>
+<script src="config.js"></script>
+<script src="productos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
